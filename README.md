@@ -6,5 +6,6 @@ Eran's workshop final Project - Leon Gilad
 * DilmerDemo VR Game experience
 ## Student Names:
 * Leon Gershkovich 207603846
-* GilAd Shay
-* Timor
+* Gil-Ad Shay 212917652
+* Timor Gabriel _______
+* Neil Pesach _________

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - waypoint
+  - Object
   layers:
   - Default
   - TransparentFX

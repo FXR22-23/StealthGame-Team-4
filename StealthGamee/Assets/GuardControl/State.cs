@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GaurdControl
+namespace GuardControl
 {
     public class State : StateMachineBehaviour
     {

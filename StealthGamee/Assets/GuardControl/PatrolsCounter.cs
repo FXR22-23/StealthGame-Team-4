@@ -1,4 +1,4 @@
-namespace GaurdControl
+namespace GuardControl
 {
     public static class PatrolsCounter
     {

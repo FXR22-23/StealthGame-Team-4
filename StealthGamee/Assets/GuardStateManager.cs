@@ -41,8 +41,8 @@ public class GuardStateManager : MonoBehaviour
         Vector3 distanceVector = target.transform.position - transform.position;
         distanceVector.y = 0;
         float angle = Vector3.Angle(transform.forward,distanceVector);
-        //Debug.Log("This is angle " + angle);
-        if (angle > viewingFieldAngle / 2)
+        //Debug.Log("This is angle " + angle); \2
+        if (angle > viewingFieldAngle)
         {
             return false;
         }

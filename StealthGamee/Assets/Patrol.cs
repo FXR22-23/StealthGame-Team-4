@@ -42,7 +42,7 @@ public class Patrol : State
         {
             //Changing the way point if the distance from the point is lower than 2 meters.(for nice slerp)
             //assuming the number of way points is odd.
-            nextWayPoint += 2;
+            nextWayPoint += 1;
             nextWayPoint %= wayPoints.Length;
             if (nextWayPoint == 0)
             {

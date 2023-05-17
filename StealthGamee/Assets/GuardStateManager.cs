@@ -23,6 +23,7 @@ public class GuardStateManager : MonoBehaviour
     float notVisibleTimer = NOT_VISIBLE_TIME;
     float restTimer = REST_TIME;
     bool flagOfDelay = false;
+    private static bool alarm;
 
 
     // Start is called before the first frame update
@@ -57,6 +58,11 @@ public class GuardStateManager : MonoBehaviour
             return (hit.collider.gameObject == target);
         }
         return false;
+    }
+
+    public static void SetAlarm(bool alarm)
+    {
+        GuardStateManager.alarm = alarm;
     }
 
     // #-------------- Start and Update Funcs --------------#

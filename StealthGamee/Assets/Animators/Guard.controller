@@ -353,7 +353,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 33e2b574cc39f0e479ef526ef695f628, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 880132d0ecfe54203ba4c610f2a7f3bc, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -435,3 +435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints: []
   goalWayPoint: {fileID: 0}
+  walk:
+    Guid:
+      Data1: 1765532116
+      Data2: 1137140189
+      Data3: 1671761033
+      Data4: -787990575
+    Path: event:/SFX/Skeleton gaurd steps

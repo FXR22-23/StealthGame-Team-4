@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Patrol : State
     public GameObject[] wayPoints;
     int nextWayPoint = 0;
     public Transform goalWayPoint;
+
+    [SerializeField] EventReference walk;
 
     private void Awake()
     {
@@ -18,11 +21,13 @@ public class Patrol : State
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        RuntimeManager.PlayOneShot(walk);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         goalWayPoint = wayPoints[nextWayPoint].transform;
         Vector3 realGoal = new Vector3(goalWayPoint.position.x, transform.position.y, goalWayPoint.position.z);
         Vector3 direction = realGoal - transform.position;

@@ -4213,8 +4213,8 @@ GameObject:
   m_Component:
   - component: {fileID: 154079804}
   - component: {fileID: 154079807}
-  - component: {fileID: 154079806}
   - component: {fileID: 154079805}
+  - component: {fileID: 154079808}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4310,14 +4310,6 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
---- !u!81 &154079806
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154079803}
-  m_Enabled: 1
 --- !u!20 &154079807
 Camera:
   m_ObjectHideFlags: 0
@@ -4361,6 +4353,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &154079808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154079803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &155806012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6917,8 +6922,8 @@ Transform:
   - {fileID: 716351889}
   - {fileID: 292908477}
   - {fileID: 1027401195}
-  - {fileID: 51995857}
   - {fileID: 1236314298}
+  - {fileID: 51995857}
   - {fileID: 1165125432}
   - {fileID: 1512341968}
   m_Father: {fileID: 0}
@@ -44507,6 +44512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1973228821}
   viewingFieldDistance: 7
+  hearingFieldDistance: 3
   viewingFieldAngle: 7
   animator: {fileID: 1833388402}
 --- !u!195 &1833388406
@@ -44547,6 +44553,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
+--- !u!114 &1833388408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833388401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e04948f8fcd16f46a961f6703145598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1973228821}
+  fmodEvent:
+    Guid:
+      Data1: 202775747
+      Data2: 1143605653
+      Data3: -1272716134
+      Data4: -1365359630
+    Path: event:/BGM+transition+chase
+  distance: 0
 --- !u!1001 &1834132631
 PrefabInstance:
   m_ObjectHideFlags: 0

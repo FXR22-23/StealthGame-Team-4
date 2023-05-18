@@ -1,6 +1,8 @@
+using GLTFast.Schema;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chase : State
 {
@@ -9,7 +11,7 @@ public class Chase : State
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        goal = GameObject.Find("Player").transform;
+        goal = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,10 +22,12 @@ public class Chase : State
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), angleSpeed);
 
         Debug.DrawRay(transform.position, direction, Color.green);
-        if (direction.magnitude >= distance)
+
+        Vector3 pushVector = direction.normalized * speed;
+        transform.Translate(pushVector, Space.World);
+        if (direction.magnitude < distance)
         {
-            Vector3 pushVector = direction.normalized * speed;
-            transform.Translate(pushVector, Space.World);
+            SceneManager.LoadScene("LoseScene");
         }
 
     }

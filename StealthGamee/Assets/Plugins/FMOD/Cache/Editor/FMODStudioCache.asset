@@ -1,5 +1,134 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4782050767848759596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../Desktop/FMOD-20230518T131206Z-001/FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638198408580000000
+  FileSizes:
+  - Name: Desktop
+    Value: 1150
+  Exists: 1
+--- !u!114 &-4648573980569919973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM+transition+chase
+  m_EditorClassIdentifier: 
+  Path: event:/BGM+transition+chase
+  Guid:
+    Data1: 202775747
+    Data2: 1143605653
+    Data3: -1272716134
+    Data4: -1365359630
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8486316986273919569}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 145500
+--- !u!114 &-3620924328599863367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Treasure chest opening
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Treasure chest opening
+  Guid:
+    Data1: -645088644
+    Data2: 1328597328
+    Data3: -948582237
+    Data4: 409688809
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5562
+--- !u!114 &-3226699732764526824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Skeleton gaurd steps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Skeleton gaurd steps
+  Guid:
+    Data1: 1765532116
+    Data2: 1137140189
+    Data3: 1671761033
+    Data4: -787990575
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1340
+--- !u!114 &-1031699119740372804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AMB/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/AMB/Ambience
+  Guid:
+    Data1: -1350218530
+    Data2: 1107142322
+    Data3: -1559037275
+    Data4: 1268184455
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 44500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +141,146 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -4782050767848759596}
+  - {fileID: 4392326100478473713}
+  EditorEvents:
+  - {fileID: 5505691658387715357}
+  - {fileID: -3620924328599863367}
+  - {fileID: 5903219729507146685}
+  - {fileID: -4648573980569919973}
+  - {fileID: 1095814085199535794}
+  - {fileID: -3226699732764526824}
+  - {fileID: -1031699119740372804}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: 4392326100478473713}
+  StringsBanks:
+  - {fileID: -4782050767848759596}
+  cacheTime: 638198408580000000
   cacheVersion: 131601
+--- !u!114 &1095814085199535794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/opening doors
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/opening doors
+  Guid:
+    Data1: 784426963
+    Data2: 1289752501
+    Data3: -725218119
+    Data4: 480660214
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4340
+--- !u!114 &4392326100478473713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../Desktop/FMOD-20230518T131206Z-001/FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638198408580000000
+  FileSizes:
+  - Name: Desktop
+    Value: 8317088
+  Exists: 1
+--- !u!114 &5505691658387715357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Pirate footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Pirate footsteps
+  Guid:
+    Data1: 2134815320
+    Data2: 1266212888
+    Data3: -1790497610
+    Data4: 817667520
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 937
+--- !u!114 &5903219729507146685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Taking diamond
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Taking diamond
+  Guid:
+    Data1: 486090900
+    Data2: 1166194192
+    Data3: -465533253
+    Data4: -1184597318
+  Banks:
+  - {fileID: 4392326100478473713}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8486316986273919569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM+transition+chase/Distance to Goal
+  m_EditorClassIdentifier: 
+  Name: Distance to Goal
+  StudioPath: 
+  Min: 0
+  Max: 40
+  Default: 0
+  ID:
+    data1: 3645179715
+    data2: 375556659
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

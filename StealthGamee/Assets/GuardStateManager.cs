@@ -104,6 +104,7 @@ public class GuardStateManager : MonoBehaviour
             else
             {
                 if (IsInSight() || IsHeard())
+
                 {
                     animator.SetBool("visible", true);
                     flagOfDelay = true;

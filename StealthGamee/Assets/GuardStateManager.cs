@@ -71,8 +71,8 @@ public class GuardStateManager : MonoBehaviour
         animator.SetBool("alarmed", true);
     }
 
-    // #-------------- Start and Update Funcs --------------#
 
+    // #-------------- Start and Update Funcs --------------#
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -103,7 +103,7 @@ public class GuardStateManager : MonoBehaviour
             }
             else
             {
-                if (IsInSight())
+                if (IsInSight() || IsHeard())
                 {
                     animator.SetBool("visible", true);
                     flagOfDelay = true;

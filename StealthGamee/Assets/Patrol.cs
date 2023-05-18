@@ -11,10 +11,6 @@ public class Patrol : State
     private void Awake()
     {
         wayPoints = GameObject.FindGameObjectsWithTag("waypoint");
-        for (int i = 0; i < wayPoints.Length; i++)
-        {
-            Debug.Log(wayPoints[i].name + " ");
-        }
     }
 
 
@@ -35,7 +31,9 @@ public class Patrol : State
         Debug.DrawRay(transform.position, direction, Color.green);
         if(direction.magnitude >= distance)
         {
+            
             Vector3 pushVector = direction.normalized * speed;
+            
             transform.Translate(pushVector, Space.World);
         }
         else
@@ -44,6 +42,7 @@ public class Patrol : State
             //assuming the number of way points is odd.
             nextWayPoint += 1;
             nextWayPoint %= wayPoints.Length;
+            Debug.Log(wayPoints[nextWayPoint].name + " \\" + wayPoints.Length);
             if (nextWayPoint == 0)
             {
                 patrolsCounter.counter++ ;

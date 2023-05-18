@@ -17,13 +17,13 @@ public class GuardStateManager : MonoBehaviour
     //#--------- Vars ---------- #
     public GameObject target;
     public float viewingFieldDistance = 7;
+    public float hearingFieldDistance = 3;
     public float viewingFieldAngle = 30;
     public Animator animator;
     float timerDelay = DELAY_TIME;
     float notVisibleTimer = NOT_VISIBLE_TIME;
     float restTimer = REST_TIME;
     bool flagOfDelay = false;
-    private static bool alarm;
 
 
     // Start is called before the first frame update
@@ -60,21 +60,32 @@ public class GuardStateManager : MonoBehaviour
         return false;
     }
 
-    public static void SetAlarm(bool alarm)
+    public bool IsHeard()
     {
-        GuardStateManager.alarm = alarm;
+        float distance = Vector3.Distance(transform.position, target.transform.position);
+        return distance <= hearingFieldDistance;
+    }
+
+    public void SetAlarm()
+    {
+        animator.SetBool("alarmed", true);
     }
 
     // #-------------- Start and Update Funcs --------------#
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (patrolsCounter.counter != NUMBER_OF_PATROLS)
         {
-            Debug.Log(patrolsCounter.counter);
+            //Debug.Log("Patrols-Counter= " + patrolsCounter.counter);
             //Todo Remove Yellow Color
-            Debug.DrawRay(transform.position, transform.forward * viewingFieldDistance);
+            //Debug.DrawRay(transform.position, transform.forward * viewingFieldDistance);
             transform.Rotate(0, 1f, 0);
             //helping to wait for the guard to enter chase mode - animator skips chase mode without it.
             if (flagOfDelay)

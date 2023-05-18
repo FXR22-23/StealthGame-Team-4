@@ -8,12 +8,14 @@ public class Patrol : State
     public GameObject[] wayPoints;
     int nextWayPoint = 0;
     public Transform goalWayPoint;
+    public float timer = 1f;
 
     [SerializeField] EventReference walk;
 
     private void Awake()
     {
         wayPoints = GameObject.FindGameObjectsWithTag("waypoint");
+        
     }
 
 
@@ -21,14 +23,25 @@ public class Patrol : State
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        RuntimeManager.PlayOneShot(walk);
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        else
+        {
+            RuntimeManager.PlayOneShot(walk);
+            timer = 1f;
+        }
+
 
         goalWayPoint = wayPoints[nextWayPoint].transform;
+        Debug.Log("This is Game Object: " + goalWayPoint.gameObject);
         Vector3 realGoal = new Vector3(goalWayPoint.position.x, transform.position.y, goalWayPoint.position.z);
         Vector3 direction = realGoal - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), angleSpeed);
@@ -53,13 +66,5 @@ public class Patrol : State
                 patrolsCounter.counter++ ;
             }
         }
-
-
-    }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-
     }
 }

@@ -11,7 +11,6 @@ public class GuardStateManager : MonoBehaviour
     const float NOT_VISIBLE_TIME = 10f;
     const float DELAY_TIME = 2f;
     const float REST_TIME = 5f;
-    const float WORK_TIME = 10f;
     const float NUMBER_OF_PATROLS = 3;
 
     //#--------- Vars ---------- #
@@ -86,7 +85,7 @@ public class GuardStateManager : MonoBehaviour
             //Debug.Log("Patrols-Counter= " + patrolsCounter.counter);
             //Todo Remove Yellow Color
             //Debug.DrawRay(transform.position, transform.forward * viewingFieldDistance);
-            transform.Rotate(0, 1f, 0);
+            //transform.Rotate(0, 1f, 0);
             //helping to wait for the guard to enter chase mode - animator skips chase mode without it.
             if (flagOfDelay)
             {

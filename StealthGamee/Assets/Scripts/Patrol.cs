@@ -11,6 +11,7 @@ public class Patrol : State
     public float timer = 1f;
 
     [SerializeField] EventReference walk;
+    [SerializeField] EventReference breath;
 
     private void Awake()
     {
@@ -36,12 +37,13 @@ public class Patrol : State
         else
         {
             RuntimeManager.PlayOneShot(walk);
+            RuntimeManager.PlayOneShot(breath);
             timer = 1f;
         }
 
 
         goalWayPoint = wayPoints[nextWayPoint].transform;
-        Debug.Log("This is Game Object: " + goalWayPoint.gameObject);
+        //Debug.Log("This is Game Object: " + goalWayPoint.gameObject);
         Vector3 realGoal = new Vector3(goalWayPoint.position.x, transform.position.y, goalWayPoint.position.z);
         Vector3 direction = realGoal - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), angleSpeed);
@@ -60,7 +62,7 @@ public class Patrol : State
             //assuming the number of way points is odd.
             nextWayPoint += 1;
             nextWayPoint %= wayPoints.Length;
-            Debug.Log(wayPoints[nextWayPoint].name + " \\" + wayPoints.Length);
+            //Debug.Log(wayPoints[nextWayPoint].name + " \\" + wayPoints.Length);
             if (nextWayPoint == 0)
             {
                 patrolsCounter.counter++ ;

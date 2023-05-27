@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class State : StateMachineBehaviour
@@ -7,9 +8,9 @@ public class State : StateMachineBehaviour
     protected Transform transform;
     protected GameObject gameObject;
     protected GuardStateManager stateManager;
-
-    protected float speed = 0.03f;
-    protected float angleSpeed = 0.075f;
+    private float SPEED = 0.045f;
+    protected float speed = 0.045f;
+    protected float angleSpeed = 0.09f;
     protected float distance = 1.5f;
     protected Transform goal;
 
@@ -20,5 +21,17 @@ public class State : StateMachineBehaviour
         stateManager = gameObject.GetComponent<GuardStateManager>();
 
         goal = stateManager.target.transform;
+    }
+
+    public void setSpeed(bool faster)
+    {   if (faster)
+        { 
+            speed += 0.015f;
+        }
+        else
+        {
+            speed = SPEED;
+        }
+        
     }
 }

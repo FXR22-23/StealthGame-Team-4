@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Winning : MonoBehaviour
 {
-  private void OnCollisionEnter(Collision collision)
+    [SerializeField] EventReference Win;
+
+    public void WinGame()
     {
-        if(collision.collider.name == "Diamond")
-        {
-            SceneManager.LoadScene("WinScene");
-        }
-        
+        RuntimeManager.PlayOneShot(Win);
+        SceneManager.LoadScene("WinScene");
     }
 }

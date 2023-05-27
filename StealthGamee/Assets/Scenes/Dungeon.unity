@@ -15636,6 +15636,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873c79848192c924692c00198ce79811, type: 3}
+--- !u!95 &612496618 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5715966952916106099, guid: 873c79848192c924692c00198ce79811, type: 3}
+  m_PrefabInstance: {fileID: 612496617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &615729417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51628,6 +51633,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3115678514163549039, guid: 873c79848192c924692c00198ce79811, type: 3}
   m_PrefabInstance: {fileID: 612496617}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100751432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100751429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839440e7aaa6510458aec1678f83d085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 612496618}
+  leftFootPosWeight: 0
+  rightFootPosWeight: 0
+  leftFootRotWeight: 0
+  rightFootRotWeight: 0
+  footOffset: {x: 0, y: 0, z: 0}
+  raycastOffsetLeft: {x: 0, y: 0, z: 0}
+  raycastOffsRight: {x: 0, y: 0, z: 0}
 --- !u!1001 &2106218563
 PrefabInstance:
   m_ObjectHideFlags: 0
